@@ -46,6 +46,7 @@ static int checkCMD(struct chip_data_s3706 *chip_info, int retry_time);
 /*******Part0:LOG TAG Declear********************/
 
 #define TPD_DEVICE_SYNAPTICS "synaptics-s3706"
+#define TPD_INFO(a, arg...)  pr_err("[TP]"TPD_DEVICE_SYNAPTICS ": " a, ##arg)
 #define TPD_DEBUG(a, arg...)\
         do {\
                 if (LEVEL_DEBUG == tp_debug) {\
